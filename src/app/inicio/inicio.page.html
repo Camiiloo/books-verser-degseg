@@ -1,0 +1,54 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Inicio 
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Inicio </ion-title>
+    </ion-toolbar>
+  </ion-header>
+  
+  <swiper-container
+  #swiper
+  (afterinit)="swiperReady()"
+  (slidechange)="swiperSlideChanged($event)"
+  [loop]="true"
+  [pagination]="true"
+  [zoom]="true"
+  >
+  <swiper-slide *ngFor="let image of images"> 
+    <div class="swiper-zoom-container">
+      <img [src]="image" />
+    </div>
+    </swiper-slide>
+  </swiper-container>
+  <ion-card class="p">
+    <br>
+    <ion-icon name="chatbox-ellipses"></ion-icon>
+    <ion-card-title >Rating</ion-card-title>
+    <br>
+  </ion-card>  
+  <ion-card class="p">
+    <br>
+    <ion-icon name="people"></ion-icon>
+    <ion-card-title >Nosotros</ion-card-title>
+    <br>
+  </ion-card>  
+  <br>
+  <ion-button (click)="salir()" routerDirection="root" lines="none" detail="false" color="dark" type="button" expand="block" shape="round">
+    Cerrar sesión
+  </ion-button>
+
+  <br>
+  <ion-button expand="full" (click)="basicShare()" color="dark" type="button" expand="block" shape="round">compartir</ion-button>
+  
+</ion-content>
+
+
