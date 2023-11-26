@@ -17,10 +17,6 @@ export class AppComponent {
   ];
  
   constructor() {}
-
- 
-
-  
 }
  
  

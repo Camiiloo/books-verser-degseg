@@ -56,5 +56,8 @@ export class LoginPage implements OnInit {
 
       await alert.present();
     }
+    localStorage.setItem('usuario',JSON.stringify(usuario));
+    localStorage.setItem('ingresado','true');
+    this.navCtrl.navigateRoot('inicio');
   }
 }
