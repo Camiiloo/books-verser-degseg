@@ -59,31 +59,4 @@ export class RegistroPage implements OnInit {
   
     await registroExitosoAlert.present();
   }
-  
-
-/*   async guardar(){
-    var f = this.formularioRegistro.value;
-
-    if(this.formularioRegistro.invalid){
-      const alert = await this.alertController.create({
-        header: 'Datos incompletos',
-        message: 'Tienes que llenar todos los datos',
-        buttons: ['Aceptar']
-      });
-  
-      await alert.present();
-      return;
-    }
-
-    var usuario = {
-      nombre: f.nombre,
-      password: f.password
-    }
-    
-
-    localStorage.setItem('usuario',JSON.stringify(usuario));
-    localStorage.setItem('ingresado','true'); */
-    /* this.navCtrl.navigateRoot('inicio'); */
-  }
-
-
+}

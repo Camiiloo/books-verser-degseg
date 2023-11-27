@@ -1,11 +1,12 @@
 {
   "libros": [
     {
-      "id": 2,
-      "titulo": "sdfdf",
-      "autor": "adeasf",
-      "cita": "sdfdfsdfdsf",
-      "resena": "dsfsdfsdf"
+      "id": 1,
+      "codigo": "sadasd",
+      "titulo": "asdsad",
+      "autor": "sadda",
+      "cita": "asdsad",
+      "resena": "asdsad"
     }
   ]
 }

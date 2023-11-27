@@ -1,6 +1,8 @@
 import { Component, } from '@angular/core';
 import { ServiceRestService } from '../services/service-rest.service';
 import { ToastController, ToastOptions } from '@ionic/angular';
+import { BarcodeScanner } from
+'@awesome-cordova-plugins/barcode-scanner/ngx';
 
 @Component({
   selector: 'app-rating',
@@ -11,10 +13,12 @@ export class RatingPage  {
 
   data: any; 
 
+  code: any; 
   libros: any; 
 
     libro: any ={
     id: null,
+    codigo: "",
     titulo: "",
     autor: "",
     cita: "",
@@ -22,9 +26,22 @@ export class RatingPage  {
   }
 
   constructor(private api: ServiceRestService, 
-    private toastController: ToastController) { 
+    private toastController: ToastController,
+    private barcodeScanner: BarcodeScanner) { 
 
     }
+
+
+    scannerQr(){
+      this.barcodeScanner.scan().then(barcodeData => {
+      this.code = barcodeData.text
+      console.log('Barcode data', barcodeData);
+      }).catch(err => {
+      console.log('Error', err);
+      })
+      }
+      
+
 
 
   limpiar(){
