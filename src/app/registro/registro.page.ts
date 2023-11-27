@@ -30,7 +30,38 @@ export class RegistroPage implements OnInit {
   ngOnInit() {
   }
 
-  async guardar(){
+  async guardar() {
+    var f = this.formularioRegistro.value;
+  
+    if (this.formularioRegistro.invalid) {
+      const alert = await this.alertController.create({
+        header: 'Datos incompletos',
+        message: 'Tienes que llenar todos los datos',
+        buttons: ['Aceptar']
+      });
+  
+      await alert.present();
+      return;
+    }
+  
+    var usuario = {
+      nombre: f.nombre,
+      password: f.password
+    }
+  
+    localStorage.setItem('usuario', JSON.stringify(usuario));
+  
+    const registroExitosoAlert = await this.alertController.create({
+      header: 'Registro exitoso',
+      message: '¡Tu registro ha sido completado correctamente!',
+      buttons: ['Aceptar']
+    });
+  
+    await registroExitosoAlert.present();
+  }
+  
+
+/*   async guardar(){
     var f = this.formularioRegistro.value;
 
     if(this.formularioRegistro.invalid){
@@ -51,8 +82,8 @@ export class RegistroPage implements OnInit {
     
 
     localStorage.setItem('usuario',JSON.stringify(usuario));
-    localStorage.setItem('ingresado','true');
-    this.navCtrl.navigateRoot('inicio');
+    localStorage.setItem('ingresado','true'); */
+    /* this.navCtrl.navigateRoot('inicio'); */
   }
 
-}
+

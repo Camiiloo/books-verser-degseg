@@ -10,9 +10,10 @@ register();
 })
 export class AppComponent {
   public appPages = [
-    { title: 'inicio', url: 'inicio', icon: 'home' },
-    { title: 'registro', url: 'registro', icon: 'log-in' },
-    { title: 'login', url: 'login', icon: 'log-in' },
+    { title: 'Inicio', url: 'inicio', icon: 'home' },
+    { title: 'Registro', url: 'registro', icon: 'document-text' },
+    { title: 'Login', url: 'login', icon: 'log-in' },
+    { title: 'Rating', url: 'rating', icon: 'star' },
     
   ];
  

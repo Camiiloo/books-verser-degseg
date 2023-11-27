@@ -30,10 +30,12 @@
     </swiper-slide>
   </swiper-container>
   <ion-card class="p">
-    <br>
-    <ion-icon name="chatbox-ellipses"></ion-icon>
-    <ion-card-title >Rating</ion-card-title>
-    <br>
+
+    <ion-card (click)="irAPagina()">
+      <ion-icon name="chatbox-ellipses"></ion-icon>
+      <ion-card-title>Rating</ion-card-title>
+    </ion-card>
+    
   </ion-card>  
   <ion-card class="p">
     <br>
@@ -47,7 +49,7 @@
   </ion-button>
 
   <br>
-  <ion-button expand="full" (click)="basicShare()" color="dark" type="button" expand="block" shape="round">compartir</ion-button>
+  <ion-button expand="full" (click)="basicShare()" color="dark" type="button" expand="block" shape="round">Compartir</ion-button>
   
 </ion-content>
 

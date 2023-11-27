@@ -28,6 +28,17 @@ const routes: Routes = [
     loadChildren: () => import('./registro/registro.module').then( m => m.RegistroPageModule),
     canActivate: [NoIngresadoGuard]
   },
+  {
+    path: 'rating',
+    loadChildren: () => import('./rating/rating.module').then( m => m.RatingPageModule),
+    canActivate: [IngresadoGuard]
+  },
+  {
+    path: 'edit-libros/:id',
+    loadChildren: () => import('./edit-libros/edit-libros.module').then( m => m.EditLibrosPageModule),
+    canActivate: [IngresadoGuard]
+  },
+
 ];
 
 @NgModule({

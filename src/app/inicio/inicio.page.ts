@@ -14,6 +14,13 @@ import { AlertController, NavController } from '@ionic/angular';
   styleUrls: ['./inicio.page.scss'],
 })
 export class InicioPage implements OnInit {
+
+  irAPagina() {
+    this.navCtrl.navigateForward('/rating');
+  }
+
+
+
   @ViewChild('swiper')
   swiperRef: ElementRef | undefined;
   swiper?: Swiper;
@@ -36,12 +43,14 @@ export class InicioPage implements OnInit {
         this.router.navigate(["/inicio"]);
       }
     });
+
+    
     
   }
   async basicShare(){
     await Share.share({
-      title: 'has visto la nueva app books-verser',
-      text: 'te invito a verla',
+      title: 'Has Visitado la nueva app books-verser',
+      text: 'Te invito a verla',
       url: 'http://ionicframework.com/',
       
     });

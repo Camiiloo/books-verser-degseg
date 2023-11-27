@@ -1,0 +1,11 @@
+{
+  "libros": [
+    {
+      "id": 2,
+      "titulo": "sdfdf",
+      "autor": "adeasf",
+      "cita": "sdfdfsdfdsf",
+      "resena": "dsfsdfsdf"
+    }
+  ]
+}
